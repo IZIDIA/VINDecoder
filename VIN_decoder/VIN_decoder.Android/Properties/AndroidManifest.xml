@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.1" package="com.moais.vin_decoder" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="30" />
+	<application android:label="VIN Decoder" android:theme="@style/MainTheme" android:icon="@drawable/mainIco">
+		<provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<queries>
+		<intent>
+			<action android:name="android.media.action.IMAGE_CAPTURE" />
+		</intent>
+	</queries>
+</manifest>

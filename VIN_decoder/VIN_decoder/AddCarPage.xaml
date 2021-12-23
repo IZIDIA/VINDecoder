@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VIN_decoder.AddCarPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--  -->
+    <ContentPage.Content>
+        <!-- Временная часть для того что бы проверить работу AI Azure -->
+        <StackLayout BackgroundColor="#191919">
+            <Label FontSize="17" TextColor="Gold" Text="Для декодирования VIN номера, выберите фотографию или сделайте снимок, где отчетливо видно идентификационный номер транспортного средства." 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="20,20,20,0">
+            </Label>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <!-- Кнопки для выбора фото, их можно и нужно перенести в подходящее место -->
+            <Button x:Name="SelectImage" CornerRadius="5" HeightRequest="100"  Text="Выбрать фотографию" FontSize="21" Pressed="SelectImage_Pressed" BackgroundColor="#0078D7"
+                    Margin="10,10,10,0" FontAttributes="Bold">
+            </Button>
+                <Button x:Name="CreateImage" CornerRadius="5" HeightRequest="100"  Text="Сделать снимок" FontSize="21" Pressed="CreateImage_Pressed" BackgroundColor="#0078D7"
+                    Margin="10,10,10,0" FontAttributes="Bold">
+            </Button>
+            <Label x:Name="WarningLabel" FontSize="17" TextColor="Red" Text="" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="20,30,20,0">
+                </Label>
+                <!-- -->
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

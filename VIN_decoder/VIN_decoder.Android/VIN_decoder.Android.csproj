@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D524D22D-3180-47D2-8E3D-90D83CCC4389}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VIN_decoder.Droid</RootNamespace>
+    <AssemblyName>VIN_decoder.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.514</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.ComputerVision">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VIN_decoder\VIN_decoder.csproj">
+      <Project>{8091BBE1-B4BF-4E62-B2AE-8C23CEE7FEE8}</Project>
+      <Name>VIN_decoder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\toyota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\alfa_romeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\aston_martin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\audi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bentley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bmw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bugatti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\buick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cadillac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\chery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\chevrolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\chrysler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\citroen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dacia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\daewoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\default_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dodge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ferrari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fiat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ford.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\holden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\honda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hyundai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\infiniti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\jaguar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\jeep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\kia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lamborghini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lancia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\land_rover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lexus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lotus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\maserati.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\maybach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mazda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mercedes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mercury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mitsubishi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\nissan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\opel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pagani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\peugeot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pontiac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\renault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rolls_royce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\saab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\skoda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ssang_yong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subaru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\suzuki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\vauxhall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\volkswagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\volvo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mainIco.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
